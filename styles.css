@@ -27,7 +27,7 @@
 
 .feature {
     --icon-size: 60px;
-    max-width: calc( 100% - 1px);
+    max-width: calc(100% - 1px);
     padding: 20px 35px;
     font-size: 1rem;
     text-align: center;
@@ -54,6 +54,8 @@
     white-space: nowrap;
     font-weight: 700;
     line-height: 1.1em;
+    min-height: 1.1em;
+    max-height: 1.1em;
     color: var(--primary-text-light-color);
 }
 

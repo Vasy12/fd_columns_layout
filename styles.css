@@ -6,78 +6,42 @@
     box-sizing: border-box;
 }
 
-:root {
-
-    --primary-text-dark-color: white;
-    --primary-background-dark-color: #292c47;
-
-    --primary-text-light-color: #2d3033;
-    --secondary-text-light-color: #6c7279;
-    --primary-background-light-color: white;
-    --primary-accent-light-color: #e84545;
-
-    /*font-family: 'Open Sans', sans-serif;*/
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+#page-header {
+    min-height: 50vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-#features {
-    padding: 80px 0;
-}
-
-.feature {
-    --icon-size: 60px;
-    max-width: calc(100% - 1px);
-    padding: 20px 35px;
-    font-size: 1rem;
+.page-title {
     text-align: center;
-    overflow: hidden;
-}
-
-.feature_margin {
-    margin: 0 auto 10px;
-}
-
-.feature-icon {
-    display: block;
-
-    margin: 10px auto 20px;
-    height: var(--icon-size);
-    width: var(--icon-size);
-    color: var(--primary-accent-light-color);
-}
-
-
-.feature-title {
-    margin: 30px 0 10px;
-    text-transform: uppercase;
-    white-space: nowrap;
+    font-family: sans-serif;
     font-weight: 700;
-    line-height: 1.1em;
-    min-height: 1.1em;
-    max-height: 1.1em;
-    color: var(--primary-text-light-color);
+    color: white;
+    font-size: 60px;
+    text-transform: uppercase;
 }
 
-.feature-description {
-
-    --line-heigth-value: 1.6em;
-    --lines-count: 4;
-
-    display: -webkit-box;
-    -webkit-line-clamp: var(--lines-count);
-    -webkit-box-orient: vertical;
-
-    min-height: calc(var(--line-heigth-value) * var(--lines-count));
-    max-height: calc(var(--line-heigth-value) * var(--lines-count));
-    line-height: var(--line-heigth-value);
-    color: var(--secondary-text-light-color);
-
+.bg-video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
-.feature-description, .feature-title {
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+#page-header::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
 }
-
